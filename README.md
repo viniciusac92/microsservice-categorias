@@ -13,8 +13,7 @@ Este serviço tem como objetivo gerenciar e cadastrar categorias de jogadores em
 
 ## Setup:
 
-O microsserviço foi configurado para ser executado na porta 3000. Certifique-se de que essa porta esteja disponível e não esteja sendo utilizada por outros serviços no ambiente.
-Como Iniciar o Microsserviço:
+Este microserviço utiliza o Protocolo AMQP como seu protocolo de transporte para estabelecer comunicação com o RabbitMQ. A aplicação é projetada para operar de forma assíncrona, trocando mensagens entre componentes. Ao ser executado, o microserviço se conecta ao servidor RabbitMQ, escuta mensagens recebidas na fila especificada e as processa. Esta configuração é especifica para ambiente de desenvolvimento local. 
 
 ### Instalação das Dependências:
 
@@ -38,15 +37,7 @@ Como Iniciar o Microsserviço:
  - Cadastro de Categorias:
         POST http://localhost:3000/categorias
 
- - Consulta de Categorias:
-        GET http://localhost:3000/categorias
-        GET http://localhost:3000/categorias/:id
 
- - Atualização de Categorias:
-        PUT http://localhost:3000/categorias/:id
-
- - Remoção de Categorias:
-        DELETE http://localhost:3000/categorias/:id
 
 
 
