@@ -7,8 +7,7 @@ import { AppService } from './app.service';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://vinicius:LcSs117QMgjYJ45q@cluster0.uatcao8.mongodb.net/?retryWrites=true&w=majority'
-      ),
+    MongooseModule.forRoot('mongodb_connection_string'), // Realize o login em uma conta https://www.mongodb.com/
     MongooseModule.forFeature([
       { name:'Categoria', schema: CategoriaSchema },
       { name:'Jogador', schema: JogadorSchema }
